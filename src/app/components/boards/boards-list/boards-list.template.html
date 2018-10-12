@@ -1,0 +1,21 @@
+<div 
+    class="board-create">
+    
+    <span>Name your board:</span> 
+    <input 
+        key
+        type="text" 
+        ng-model="$ctrl.title" 
+        ng-keydown="($event.keyCode === 13) && $ctrl.addBoard()" 
+        > 
+    <button ng-click='$ctrl.addBoard()'>Add</button>
+   <div></div>
+</div>
+<div 
+    class="boards-list">
+    <boards-item 
+        ng-repeat="list in $ctrl.boards" 
+        list="list" 
+        on-delete="$ctrl.deleteBoard(list)">
+    </boards-item>
+</div>

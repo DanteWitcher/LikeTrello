@@ -1,0 +1,46 @@
+.to_do_item {
+    margin-top: 4px;
+    position: relative;
+    z-index: 1;
+    height: 20px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+    padding: 5px;
+    
+    input {
+        position: absolute;
+        top: 20%;
+        left: 2%;
+    }   
+    &:hover {
+        color: #fff;
+        background-color: #31b0d5;
+        border-color: #2aabd2;
+        cursor: move;
+    }
+    
+    div.todo_delete {
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        border: 1px solid rgb(255, 255, 255);
+        position: absolute;
+        top: 6%;
+        right: 2%;
+        z-index: 999;
+        background-color: #d9534f;
+        
+        cursor: pointer;
+        font-size: .7em;
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+.done {
+    text-decoration: line-through;
+    color: black;
+}

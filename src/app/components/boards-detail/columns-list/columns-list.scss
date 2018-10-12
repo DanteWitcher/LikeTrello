@@ -1,0 +1,18 @@
+@import '../../boards/boards-list/boards-list.scss';
+
+.add_column {
+    padding: 2%;
+    input {
+        @extend %input-shared;
+        
+    }
+    button {
+        @extend %simple-button-shared;
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+}
+.column__block {
+    display: flex;
+    flex-flow: row wrap;
+}

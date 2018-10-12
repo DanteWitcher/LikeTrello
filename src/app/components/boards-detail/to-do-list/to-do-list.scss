@@ -1,0 +1,35 @@
+@import '../columns-list/columns-list.scss';
+
+.list__block {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    margin-top: 10px;
+
+    input {
+        @extend %input-shared;
+        margin-bottom: 10px;
+    }
+
+    .create_todo {
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+
+        button {
+            @extend %simple-button-shared;
+            color: #fff;
+            background-color: #0275d8;
+            border-color: #0275d8;
+            width: 100%;
+            margin: 0;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.6;
+                color: #fff;
+                background-color: #0275d8;
+                border-color: #0275d8;
+            }
+        }
+    }
+}

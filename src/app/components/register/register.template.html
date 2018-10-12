@@ -1,0 +1,24 @@
+<div class="register">
+    <div class="register__block">
+        <h3>Register:</h3>
+        <form name="form" class="css-form">
+            <div class="error" ng-show="form.$error.email">
+                This is not a valid email
+            </div>
+            <input validate-email type="email" ng-model="$ctrl.email" placeholder="email">
+            <br>
+            <div class="error" ng-show="form.$error.password">
+                Strong password isn't correct
+            </div>
+            <input validate-password type="password" ng-model="$ctrl.password" placeholder="password">
+            <br>
+            <div class="error" ng-show="$ctrl.error">
+            {{$ctrl.error}}
+            </div>
+            <button ng-click="$ctrl.send()">Register</button>
+            
+            <br>
+            <br>
+        </form>
+    </div>
+</div>

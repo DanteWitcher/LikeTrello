@@ -1,0 +1,17 @@
+<div 
+    class="column__item">
+    
+    <span>{{$ctrl.column.title}}</span>
+    <span 
+        class="delete" 
+        ng-click="$ctrl.delete()">X</span>
+    <br>
+    <to-do-list 
+        class="to_do_block" 
+        id="$ctrl.column.id" 
+        list="$ctrl.column.todo"
+        column="$ctrl.column"
+        
+        
+        send-to-columns="$ctrl.send(data)"></to-do-list>
+</div>

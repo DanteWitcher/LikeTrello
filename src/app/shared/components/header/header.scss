@@ -1,0 +1,68 @@
+$bgr_c: #333335;
+$blue_c: #5454aa;
+$btn_c: #838a92;
+$btn_blue: #65a3be;
+
+%button-shared {
+    border: 1px solid #a4afba;
+    background-color: transparent;
+    color: #838a92;
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding: 1px 5px;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    width: auto;
+    font-size: .8em;
+
+    &:hover {
+        cursor: pointer;
+        color: $btn_blue;
+        border-color: $btn_blue;
+    }
+}
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+   
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d5dddf;
+
+    h2 {
+        margin: 0;
+        padding-left: 1%;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $blue_c;
+
+            &:hover {
+                color: lighten($blue_c, 20%);
+            }
+        }
+    }
+
+    div.right {
+        display: flex;
+        align-self: flex-end;
+        padding-right: 2%;
+
+        a.login {
+            @extend %button-shared;
+        }
+
+        a.signin {
+            @extend %button-shared;
+        }
+    }
+}

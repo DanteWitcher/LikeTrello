@@ -1,0 +1,25 @@
+
+.column__item {
+    border: 1px solid rgb(109, 109, 78);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    text-align: center;    
+    
+
+    .delete {
+        float: right;
+        color: #fff;
+        background-color: #d9534f;
+        border: 1px solid #8a3633;
+        border-radius: 15px;
+        font-size: 15px;
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+}

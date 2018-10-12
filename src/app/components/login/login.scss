@@ -1,0 +1,49 @@
+@import '../register/register.scss';
+
+.log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    
+    .login__block {
+        text-align: left;
+        max-width: 230px;
+        h3 {
+            padding-bottom: 5px;
+            border-bottom: 1px solid black;
+        }
+        input {
+            @extend %input-auth;
+            color: black;
+        }
+        .good {
+            border: 2px solid #78FA89;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .error {
+            border: 2px solid #FA787E;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        button.login {
+            @extend %button-auth;
+            margin-bottom: 10px;
+            
+        }
+        button.logout {
+            @extend %button-auth;
+            margin-bottom: 0;
+        }
+       
+    }
+}
+
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-touched {
+    background-color: #78FA89;
+}

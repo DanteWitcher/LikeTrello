@@ -1,0 +1,19 @@
+<div 
+    class="container_column" >
+    <div 
+        class="add_column">
+        <span>Create column:</span>
+        <input 
+            type="text" 
+            ng-model="$ctrl.title" 
+            ng-keydown="($event.keyCode === 13) && $ctrl.addColumn()">
+        <button ng-click="$ctrl.addColumn()">Add new Column</button>
+    </div>
+    <div class="column__block">
+        <column-item 
+            class="column__elem"
+            ng-repeat="column in $ctrl.columns" 
+            column="column" 
+            on-delete="$ctrl.deleteColumn(column)"></column-item>
+    </div>
+</div>
