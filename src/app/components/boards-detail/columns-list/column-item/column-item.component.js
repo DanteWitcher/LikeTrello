@@ -4,10 +4,7 @@ import './column-item.scss';
 class ColumnItemController {
     constructor(ColumnService) {
         this.columnService = ColumnService;
-        console.log(this, 'ColumnItemController');
-    }
-    send(data) {
-        console.log('get Data', data);
+        //console.log(this, 'ColumnItemController');
     }
     delete() {
         this.onDelete(this.column);

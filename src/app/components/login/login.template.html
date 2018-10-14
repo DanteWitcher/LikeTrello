@@ -2,11 +2,6 @@
     <div class="login__block">
         <h3>Login:</h3>
         <form name="form" class="css-form">
-            <div 
-                class="error" 
-                ng-show="form.uEmail.$error.email">
-                This is not a valid email
-            </div>
             <label for="uEmail">
                 <input 
                     validate-email 
@@ -18,12 +13,13 @@
             </label>
             <div 
                 class="error" 
-                ng-show="form.$error.password">
-                Strong password isn't correct
+                ng-show="form.uEmail.$error.email">
+                This is not a valid email
             </div>
             <label for="">
                 <input 
                     validate-password 
+                    ng-keydown="($event.keyCode === 13) && $ctrl.login()" 
                     type="password" 
                     ng-model="$ctrl.password" 
                     placeholder="password" 
@@ -31,11 +27,16 @@
             </label>
             <div 
                 class="error" 
-                ng-show="$ctrl.error">
-                {{$ctrl.error}}
+                ng-show="form.$error.password">
+                Strong password isn't correct
             </div>
         </form>
         <button ng-click="$ctrl.login()" class="login">Log in</button>
+            <div 
+                class="error" 
+                ng-show="$ctrl.error">
+                {{$ctrl.error}}
+            </div>
         <button ng-click="$ctrl.logout()" class="logout">Log out</button>
             <div class="good" ng-show="$ctrl.goodResponse">
                 {{$ctrl.goodResponse}}

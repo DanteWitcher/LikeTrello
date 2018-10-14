@@ -4,7 +4,6 @@ import './boards-list.scss';
 
 class BoardListController {
     constructor(BoardService) {
-
         this.boardService = BoardService;
         this.title = "";
         

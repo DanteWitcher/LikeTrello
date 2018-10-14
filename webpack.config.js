@@ -44,12 +44,7 @@ module.exports = function (env, argv) {
                     use: [
                         (argv.mode === 'development') ? 'style-loader' : MiniCssExtractPlugin.loader,
                         'css-loader',
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                options: {},
-                            }
-                        },
+                        'postcss-loader',
                         'sass-loader'
                     ]
                 },
@@ -63,17 +58,6 @@ module.exports = function (env, argv) {
                         }
                     }]
                 },
-                // {
-                //     test: /\.(png|jpg|jpeg|gif)$/i,
-                //     use: [
-                //       {
-                //         loader: 'url-loader',
-                //         options: {
-                //           limit: 8192
-                //         }
-                //       }
-                //     ]
-                //   },
                   {
                     test:  /\.(woff|woff2|eot|ttf|svg)$/,
                     use: [{

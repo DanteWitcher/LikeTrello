@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-<!-- Бла бла бла -->
-=======
-<!-- some new -->
->>>>>>> updating_elements
 <div 
     my-drag
     class="to_do_item"
     drag-item="$ctrl.todo"
-    
-    data="{item: $ctrl.todo, column: $ctrl.column, list: $ctrl.list}">
-    <input type="checkbox" ng-model="ctrl.todo.done" ng-click="$ctrl.change()">
+    >
+    <input 
+        type="checkbox" 
+        ng-model="ctrl.todo.done" 
+        ng-click="$ctrl.change()" >
         
     <span ng-class="{done: !$ctrl.todo.done}">{{$ctrl.todo.title}}</span>   
     <div 

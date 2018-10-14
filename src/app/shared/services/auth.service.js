@@ -15,7 +15,7 @@ export default class {
             withCredentials: true
 
         }).then((response) => {
-            console.log(response, 'good');
+            //console.log(response, 'good');
             return response.data;
         }).catch((error) => {
             console.log(error);

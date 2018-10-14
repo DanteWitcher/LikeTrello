@@ -8,7 +8,7 @@ class ColumnsListController {
         this.updateNoteService = updateNoteService;
         this.boardId = $routeParams.boardId;
         this.title = "";
-    //    console.log(this, 'ColumnsListController');
+    //  console.log(this, 'ColumnsListController');
     }
     
     addColumn() {

@@ -1,7 +1,6 @@
 <div 
     my-drop 
     class="list__block" 
-    column="$ctrl.column" 
     list = "$ctrl.list"
     on-dropped="$ctrl.dropped(data)" >
     <div class="create_todo">
@@ -15,8 +14,6 @@
         </div>
         
         <to-do-item
-            list="$ctrl.list"
-            column="$ctrl.column"
             ng-repeat="todo in $ctrl.list" 
             todo="todo" 
             on-delete="$ctrl.deleteToDo(todo)">

@@ -17,7 +17,7 @@
     border-radius: 4px;
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 10%;
+    margin-top: 10%;
 }
 %button-auth {
     font-size: 16px;
@@ -30,6 +30,7 @@
     padding: 0 15px;
     width: 100%;
     border: 0;
+    margin-top: 10%;
 
     &:hover {
         cursor: pointer;
@@ -57,11 +58,11 @@
         @extend %button-auth;
     }
     .error {
-        border: 2px solid #FA787E;
+        border: 1px solid #FA787E;
         border-radius: 5px;
-        padding: 5px;
+        padding: 2px;
+        font-size: 12px;
     }
-    
 }
 
 .css-form input.ng-invalid.ng-touched {

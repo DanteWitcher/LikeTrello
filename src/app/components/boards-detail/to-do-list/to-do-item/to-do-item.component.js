@@ -4,7 +4,7 @@ import './to-do-item.scss';
 class ToDoItemController {
     constructor(updateNoteService) {
         this.update = updateNoteService;
-        console.log(this, 'ToDoItemController');
+        //console.log(this, 'ToDoItemController');
     }
     change() {
         this.todo.done = !this.todo.done;
@@ -19,8 +19,6 @@ export default {
     controller: ToDoItemController,
     bindings: {
         todo: "<",
-        column: "<",
-        onDelete: "&",
-        list: "<"
+        onDelete: "&"
     }
 };

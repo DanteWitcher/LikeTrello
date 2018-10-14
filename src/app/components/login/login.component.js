@@ -3,16 +3,16 @@ import template from './login.template.html';
 import './login.scss';
 
 class LoginController {
-    constructor(AuthService, BoardService) {
+    constructor(AuthService) {
         this.error = "";
         this.goodResponse = '';
         this.data = {};
-        this.board = BoardService;
         this.auth = AuthService;
         this.url = "https://cloudcalltodo.azurewebsites.net/api/users/login?email=sasha%40gmail.com&password=Sasha!123";
     }
     login() { 
         this.clean();
+
         if(this.email && this.password) {
             let data = {
                 email: this.email,
@@ -47,8 +47,5 @@ class LoginController {
 
 export default {
     template: template,
-    controller: LoginController,
-    bingdings: {
-        send: "<"
-    }
+    controller: LoginController
 };

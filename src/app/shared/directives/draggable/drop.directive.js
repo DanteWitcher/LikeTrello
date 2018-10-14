@@ -1,6 +1,6 @@
 class DropController {
     constructor() {
-        console.log(this, 'Drop Directive');
+        //console.log(this, 'Drop Directive');
     }
     onDrop(from, to, item) {
         //console.log('on Drop');
@@ -19,7 +19,6 @@ export default function ($document, draggableService) {
         controller: DropController,
         bindToController: true,
         scope: {
-            column: '=',
             onDropped: '&',
             list: '='
         },
@@ -45,16 +44,17 @@ export default function ($document, draggableService) {
                     parent = e.target.closest('.list__block');
 
                 if (parent.contains(carryElemement)) {
+                    carryElemement.classList.remove('draggable');
                     return false;
                 }
                 
                 let from = draggableService.from,
                     to = draggableService.to = ctrl.list,
                     item = draggableService.item;
-                    console.log(from, item, to);
                
                 ctrl.onDrop(from, to, item);
-                
+
+                draggableService.clear();
                 e.stopPropagation();
                 return true;
             });

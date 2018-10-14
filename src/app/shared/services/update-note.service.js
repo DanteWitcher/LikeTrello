@@ -12,7 +12,7 @@ export default class {
             data: note,
             withCredentials: true
         }).then((response) => {
-            console.log(response);
+            //console.log(response);
             return response;
         }).catch((error) => {
             console.log(error);

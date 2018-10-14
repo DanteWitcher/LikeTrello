@@ -5,7 +5,7 @@ export default function () {
         restrict: 'A',
         require: 'ngModel',
         link: function (scope, elem, attr, ctrl) {
-            console.log(scope, elem, attr, ctrl, 'validate');
+            //console.log(scope, elem, attr, ctrl, 'validate');
 
             ctrl.$validators.password = function (modelValue, viewValue) {
                 console.log(modelValue, viewValue, 'out');

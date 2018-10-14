@@ -2,29 +2,19 @@ import template from './to-do-list.template.html';
 import './to-do-list.scss';
 
 class toDoListController {
-    constructor(updateNoteService, NoteToDoService, $scope, $q) {
+    constructor(updateNoteService, NoteToDoService) {
         this.title = "";
-        this.scope = $scope;
         this.noteToDoService = NoteToDoService;
         this.updateNoteService = updateNoteService;
-        this.q = $q;
 
-        console.log(this, 'toDoListController');
+        //console.log(this, 'toDoListController');
     }
     dropped(data) {
         data.from.splice(data.from.indexOf(data.item), 1);
         data.item.listId = this.column.id;
         this.list = this.list || [];
         this.list.push(data.item);
-        //data.to.todo.push(data.item);
 
-        
-        //SCOPE?????
-        //this.scope.$apply();
-        //CALLBACK TO COLUMNS
-        this.sendToColumns({
-            data: data
-        });
         //service
         this.updateNoteService.updateNote(data.item);
     }
@@ -66,8 +56,6 @@ export default {
     bindings: {
         list: "<",
         id: "<",
-        column: "<",
-        sendToColumns: "&"
-    },
-    transclude: true
+        column: "<"
+    }
 };
